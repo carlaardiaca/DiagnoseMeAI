@@ -16,6 +16,7 @@ The project is organized into the following folders and files:
 - `model_selection.py`: Script for selecting the best model using GridSearchCV.
 - `model_testing.py`: Model evaluation and performance metrics generation.
 - `requirements.txt`: Necessary dependencies to run the project.
+- `DiagnoseMe_Predictive_Symptom2Disease_Analysis.ipynb`: This Jupyter notebook contains the detailed workflow of the project, including data cleaning, feature engineering, model selection and optimization and results analysis. 
 
 ## Environment Setup
 To install all required dependencies, run the following command:

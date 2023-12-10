@@ -30,6 +30,9 @@ df = pd.read_csv('data/Symptom2Disease.csv')
 df['text'] = df['text'].apply(clean_text)
 print("OK_data")
 
+duplicate_rows = df[df.duplicated(keep=False)]
+df = df.drop_duplicates()
+
 # Clean and preprocess text data
 df['text'] = df['text'].apply(remove_irrelevant_words)
 
@@ -115,3 +118,4 @@ predict_probaLIME = make_predict_probaLIME(best_rf_model, tokenizer)
 lime_explain_misclassified(explainer, mal_classificades, y_test, y_pred, predict_probaLIME, LIME, nombre_a_numero, 3)
 
 top3_accuracy = evaluate_top3_accuracy_and_explain(explainer, best_rf_model, X_test, y_test, y_pred,predict_probaLIME, LIME, nombre_a_numero)
+#lime_explain_misclassified(explainer, [115,150], y_test, y_pred, predict_probaLIME, LIME, nombre_a_numero, 3)
