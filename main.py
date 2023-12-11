@@ -103,7 +103,7 @@ print("OK prediction")
 
 # Plot the confusion matrix
 conf_matrix = confusion_matrix(y_test, y_pred)
-plot_confusion_matrix(conf_matrix, df['label'].unique(), save=True)
+#plot_confusion_matrix(conf_matrix, df['label'].unique(), save=True)
 
 # LIME explanations for misclassified cases
 mal_classificades = []
@@ -115,7 +115,7 @@ label_names_list = label_names.keys()
 nombre_a_numero = {v: k for k, v in label_names.items()}
 explainer = LimeTextExplainer(class_names=label_names_list, verbose=True)
 predict_probaLIME = make_predict_probaLIME(best_rf_model, tokenizer)
-lime_explain_misclassified(explainer, mal_classificades, y_test, y_pred, predict_probaLIME, LIME, nombre_a_numero, 3)
+#lime_explain_misclassified(explainer, mal_classificades, y_test, y_pred, predict_probaLIME, LIME, nombre_a_numero, 3)
 
 top3_accuracy = evaluate_top3_accuracy_and_explain(explainer, best_rf_model, X_test, y_test, y_pred,predict_probaLIME, LIME, nombre_a_numero)
 #lime_explain_misclassified(explainer, [115,150], y_test, y_pred, predict_probaLIME, LIME, nombre_a_numero, 3)

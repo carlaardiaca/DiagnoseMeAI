@@ -17,6 +17,7 @@ The project is organized into the following folders and files:
 - `model_testing.py`: Model evaluation and performance metrics generation.
 - `requirements.txt`: Necessary dependencies to run the project.
 - `DiagnoseMe_Predictive_Symptom2Disease_Analysis.ipynb`: This Jupyter notebook contains the detailed workflow of the project, including data cleaning, feature engineering, model selection and optimization and results analysis. 
+- `DiagnoseMe_Symptom2Disease_paper.pdf`: A comprehensive report detailing the research methodology, algorithms used, system design, results, and conclusions of the Symptom to Disease prediction project.
 
 ## Environment Setup
 To install all required dependencies, run the following command:
